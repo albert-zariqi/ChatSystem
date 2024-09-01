@@ -1,0 +1,9 @@
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\bin\Debug\netstandard2.1\ChatSystem.Caching.deps.json
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\bin\Debug\netstandard2.1\ChatSystem.Caching.dll
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\bin\Debug\netstandard2.1\ChatSystem.Caching.pdb
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\obj\Debug\netstandard2.1\ChatSystem.Caching.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\obj\Debug\netstandard2.1\ChatSystem.Caching.AssemblyInfoInputs.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\obj\Debug\netstandard2.1\ChatSystem.Caching.AssemblyInfo.cs
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\obj\Debug\netstandard2.1\ChatSystem.Caching.csproj.CoreCompileInputs.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\obj\Debug\netstandard2.1\ChatSystem.Caching.dll
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Caching\obj\Debug\netstandard2.1\ChatSystem.Caching.pdb

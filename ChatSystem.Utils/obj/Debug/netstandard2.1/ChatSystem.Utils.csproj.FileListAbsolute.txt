@@ -1,0 +1,10 @@
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\bin\Debug\netstandard2.1\ChatSystem.Utils.deps.json
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\bin\Debug\netstandard2.1\ChatSystem.Utils.dll
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\bin\Debug\netstandard2.1\ChatSystem.Utils.pdb
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.csproj.AssemblyReference.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.AssemblyInfoInputs.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.AssemblyInfo.cs
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.csproj.CoreCompileInputs.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.dll
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Utils\obj\Debug\netstandard2.1\ChatSystem.Utils.pdb

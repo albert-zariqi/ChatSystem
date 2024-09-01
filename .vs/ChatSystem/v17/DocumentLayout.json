@@ -1,0 +1,1136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\entities\\chatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\entities\\chatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\infrastructure\\common\\behaviors\\performancebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\infrastructure\\common\\behaviors\\performancebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\handlers\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\handlers\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\controllers\\v1\\chatsessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\controllers\\v1\\chatsessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\chatseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\chatseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\migrations\\chatdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\migrations\\chatdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\migrations\\20240901165012_addedinitial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\migrations\\20240901165012_addedinitial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\interceptors\\dispatchdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\interceptors\\auditableentityinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\interceptors\\auditableentityinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\teamconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\teamconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\shiftconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\shiftconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\seniorityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\seniorityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\chatsessionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\chatsessionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\agentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\infrastructure\\data\\configurations\\agentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\sessions\\commands\\createsessioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\sessions\\commands\\createsessioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\services\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\services\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\services\\cachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\services\\cachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\infrastructure\\common\\application\\services\\icachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\infrastructure\\common\\application\\services\\icachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\infrastructure\\common\\behaviors\\loggingbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\infrastructure\\common\\behaviors\\loggingbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\infrastructure\\common\\infrastructure\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\infrastructure\\common\\infrastructure\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\application\\infrastructure\\common\\infrastructure\\ichatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\application\\infrastructure\\common\\infrastructure\\ichatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\enums\\chatsessionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\enums\\chatsessionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\entities\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\entities\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\entities\\seniority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\entities\\seniority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\entities\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\entities\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\layers\\domain\\common\\baseevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\layers\\domain\\common\\baseevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\chatsystem.chat.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\chatsystem.chat.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.api\\controllers\\apibasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71647E8-8D26-463D-AB4B-ED92BB21002F}|ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj|solutionrelative:chatsystem.chat.api\\controllers\\apibasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.utils\\responseresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|solutionrelative:chatsystem.utils\\responseresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.utils\\chatsystem.utils.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|solutionrelative:chatsystem.utils\\chatsystem.utils.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.utils\\exceptions\\appexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|solutionrelative:chatsystem.utils\\exceptions\\appexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.utils\\errors\\coreerrors\\genericerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|solutionrelative:chatsystem.utils\\errors\\coreerrors\\genericerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.utils\\errors\\customerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|solutionrelative:chatsystem.utils\\errors\\customerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.utils\\errors\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A92F35-69B5-43EB-A1B6-AD27A07F8690}|ChatSystem.Utils\\ChatSystem.Utils.csproj|solutionrelative:chatsystem.utils\\errors\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAA293A-2B3B-41B6-A8EA-BB45CE1488D1}|ChatSystem.Caching\\ChatSystem.Caching.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.caching\\chatsystem.caching.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6BAA293A-2B3B-41B6-A8EA-BB45CE1488D1}|ChatSystem.Caching\\ChatSystem.Caching.csproj|solutionrelative:chatsystem.caching\\chatsystem.caching.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAA293A-2B3B-41B6-A8EA-BB45CE1488D1}|ChatSystem.Caching\\ChatSystem.Caching.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.caching\\models\\shiftcapacitycachemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAA293A-2B3B-41B6-A8EA-BB45CE1488D1}|ChatSystem.Caching\\ChatSystem.Caching.csproj|solutionrelative:chatsystem.caching\\models\\shiftcapacitycachemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAA293A-2B3B-41B6-A8EA-BB45CE1488D1}|ChatSystem.Caching\\ChatSystem.Caching.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.caching\\cachingkeys\\shiftcachingkeys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAA293A-2B3B-41B6-A8EA-BB45CE1488D1}|ChatSystem.Caching\\ChatSystem.Caching.csproj|solutionrelative:chatsystem.caching\\cachingkeys\\shiftcachingkeys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77EE633B-701E-4CF1-9F11-99295F009CD4}|ChatSystem.Chat.Common\\ChatSystem.Chat.Common.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.common\\response\\chatsessionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77EE633B-701E-4CF1-9F11-99295F009CD4}|ChatSystem.Chat.Common\\ChatSystem.Chat.Common.csproj|solutionrelative:chatsystem.chat.common\\response\\chatsessionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77EE633B-701E-4CF1-9F11-99295F009CD4}|ChatSystem.Chat.Common\\ChatSystem.Chat.Common.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.common\\response\\chatpollresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77EE633B-701E-4CF1-9F11-99295F009CD4}|ChatSystem.Chat.Common\\ChatSystem.Chat.Common.csproj|solutionrelative:chatsystem.chat.common\\response\\chatpollresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77EE633B-701E-4CF1-9F11-99295F009CD4}|ChatSystem.Chat.Common\\ChatSystem.Chat.Common.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.common\\requests\\chatsessionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77EE633B-701E-4CF1-9F11-99295F009CD4}|ChatSystem.Chat.Common\\ChatSystem.Chat.Common.csproj|solutionrelative:chatsystem.chat.common\\requests\\chatsessionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\chatsystem.chat.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\chatsystem.chat.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\extensions\\chatapiclientextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\extensions\\chatapiclientextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\configurations\\chatapiclientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\configurations\\chatapiclientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\clients\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\clients\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\clients\\requests\\chatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\clients\\requests\\chatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\abstractions\\ichatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\abstractions\\ichatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|c:\\users\\arditzariqi\\source\\repos\\chatsystem\\chatsystem.chat.client\\abstractions\\requests\\ichatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E40FAB6-753F-4803-A248-0C76A166F5BF}|ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj|solutionrelative:chatsystem.chat.client\\abstractions\\requests\\ichatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Extensions\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Extensions\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Extensions\\DependencyInjection.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Extensions\\DependencyInjection.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:55:41.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Program.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Program.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Program.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:54:41.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatSessionController.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Controllers\\V1\\ChatSessionController.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Controllers\\V1\\ChatSessionController.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Controllers\\V1\\ChatSessionController.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Controllers\\V1\\ChatSessionController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwB4AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:22:35.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Handlers\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Handlers\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Handlers\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Handlers\\GlobalExceptionHandler.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAEwCsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:23:36.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PerformanceBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\PerformanceBehaviour.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\PerformanceBehaviour.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\PerformanceBehaviour.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\PerformanceBehaviour.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:34:33.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatSession.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\ChatSession.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\ChatSession.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\ChatSession.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\ChatSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:38:01.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChatSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\ChatSeeder.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\ChatSeeder.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\ChatSeeder.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\ChatSeeder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEABAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:53:58.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:53:20.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\appsettings.json",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\appsettings.json",
+              "RelativeToolTip": "ChatSystem.Chat.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-01T21:52:53.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChatDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\ChatDbContext.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\ChatDbContext.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\ChatDbContext.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\ChatDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:51:45.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\ChatDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\ChatDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\ChatDbContextModelSnapshot.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\ChatDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:50:44.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240901165012_AddedInitial3.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\20240901165012_AddedInitial3.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\20240901165012_AddedInitial3.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\20240901165012_AddedInitial3.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Migrations\\20240901165012_AddedInitial3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:49:48.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DispatchDomainEventsInterceptor.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\DispatchDomainEventsInterceptor.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:48:54.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuditableEntityInterceptor.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\AuditableEntityInterceptor.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\AuditableEntityInterceptor.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\AuditableEntityInterceptor.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Interceptors\\AuditableEntityInterceptor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:47:25.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TeamConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\TeamConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:46:51.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ShiftConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ShiftConfiguration.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ShiftConfiguration.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ShiftConfiguration.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ShiftConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:46:29.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SeniorityConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\SeniorityConfiguration.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\SeniorityConfiguration.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\SeniorityConfiguration.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\SeniorityConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:45:58.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChatSessionConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ChatSessionConfiguration.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ChatSessionConfiguration.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ChatSessionConfiguration.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\ChatSessionConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:45:29.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AgentConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\AgentConfiguration.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\AgentConfiguration.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\AgentConfiguration.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Infrastructure\\Data\\Configurations\\AgentConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:45:04.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateSessionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Sessions\\Commands\\CreateSessionCommand.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Sessions\\Commands\\CreateSessionCommand.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Sessions\\Commands\\CreateSessionCommand.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Sessions\\Commands\\CreateSessionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:41:44.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Services\\CurrentUserService.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Services\\CurrentUserService.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Services\\CurrentUserService.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Services\\CurrentUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:41:11.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CachingService.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Services\\CachingService.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Services\\CachingService.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Services\\CachingService.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Services\\CachingService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAUwCsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:40:48.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ChatSessionStatus.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Enums\\ChatSessionStatus.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Enums\\ChatSessionStatus.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Enums\\ChatSessionStatus.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Enums\\ChatSessionStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:39:45.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Team.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Team.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Team.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Team.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:39:23.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Shift.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Shift.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Shift.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Shift.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Shift.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA+wA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:38:54.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IChatDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\IChatDbContext.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\IChatDbContext.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\IChatDbContext.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\IChatDbContext.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:35:30.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ICurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\ICurrentUserService.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\ICurrentUserService.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\ICurrentUserService.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Infrastructure\\ICurrentUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:35:07.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LoggingBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\LoggingBehaviour.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\LoggingBehaviour.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\LoggingBehaviour.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Behaviors\\LoggingBehaviour.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:33:50.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ICachingService.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Application\\Services\\ICachingService.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Application\\Services\\ICachingService.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Application\\Services\\ICachingService.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Application\\Infrastructure\\Common\\Application\\Services\\ICachingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:33:27.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Seniority.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Seniority.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Seniority.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Seniority.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Seniority.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:38:31.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAUwCMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:37:39.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Agent.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Agent.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Agent.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Agent.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Entities\\Agent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:37:15.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BaseEvent.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Common\\BaseEvent.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Layers\\Domain\\Common\\BaseEvent.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Layers\\Domain\\Common\\BaseEvent.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Layers\\Domain\\Common\\BaseEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:36:53.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ChatSystem.Chat.API",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj",
+              "RelativeToolTip": "ChatSystem.Chat.API\\ChatSystem.Chat.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-01T21:23:20.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:150:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:151:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:152:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:153:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:154:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:155:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:156:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:157:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:158:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:159:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:160:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:161:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:162:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:163:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:164:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:165:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:166:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:167:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:168:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:169:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:170:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ApiBaseController.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Controllers\\ApiBaseController.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.API\\Controllers\\ApiBaseController.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.API\\Controllers\\ApiBaseController.cs",
+              "RelativeToolTip": "ChatSystem.Chat.API\\Controllers\\ApiBaseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:21:58.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ResponseResult.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\ResponseResult.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Utils\\ResponseResult.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\ResponseResult.cs",
+              "RelativeToolTip": "ChatSystem.Utils\\ResponseResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:08:04.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AppException.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Exceptions\\AppException.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Utils\\Exceptions\\AppException.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Exceptions\\AppException.cs",
+              "RelativeToolTip": "ChatSystem.Utils\\Exceptions\\AppException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:07:13.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "GenericErrors.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Errors\\CoreErrors\\GenericErrors.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Utils\\Errors\\CoreErrors\\GenericErrors.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Errors\\CoreErrors\\GenericErrors.cs",
+              "RelativeToolTip": "ChatSystem.Utils\\Errors\\CoreErrors\\GenericErrors.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:03:58.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CustomError.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Errors\\CustomError.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Utils\\Errors\\CustomError.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Errors\\CustomError.cs",
+              "RelativeToolTip": "ChatSystem.Utils\\Errors\\CustomError.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:03:29.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ErrorDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Errors\\ErrorDetails.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Utils\\Errors\\ErrorDetails.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\Errors\\ErrorDetails.cs",
+              "RelativeToolTip": "ChatSystem.Utils\\Errors\\ErrorDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:03:43.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ChatSystem.Utils.csproj",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\ChatSystem.Utils.csproj",
+              "RelativeDocumentMoniker": "ChatSystem.Utils\\ChatSystem.Utils.csproj",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Utils\\ChatSystem.Utils.csproj",
+              "RelativeToolTip": "ChatSystem.Utils\\ChatSystem.Utils.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-01T21:02:54.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ShiftCapacityCacheModel.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Caching\\Models\\ShiftCapacityCacheModel.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Caching\\Models\\ShiftCapacityCacheModel.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Caching\\Models\\ShiftCapacityCacheModel.cs",
+              "RelativeToolTip": "ChatSystem.Caching\\Models\\ShiftCapacityCacheModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:01:13.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ShiftCachingKeys.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Caching\\CachingKeys\\ShiftCachingKeys.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Caching\\CachingKeys\\ShiftCachingKeys.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Caching\\CachingKeys\\ShiftCachingKeys.cs",
+              "RelativeToolTip": "ChatSystem.Caching\\CachingKeys\\ShiftCachingKeys.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T21:00:38.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ChatSystem.Caching.csproj",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Caching\\ChatSystem.Caching.csproj",
+              "RelativeDocumentMoniker": "ChatSystem.Caching\\ChatSystem.Caching.csproj",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Caching\\ChatSystem.Caching.csproj",
+              "RelativeToolTip": "ChatSystem.Caching\\ChatSystem.Caching.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-01T20:59:57.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ChatSessionResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Common\\Response\\ChatSessionResponse.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Common\\Response\\ChatSessionResponse.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Common\\Response\\ChatSessionResponse.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Common\\Response\\ChatSessionResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:33:11.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ChatPollResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Common\\Response\\ChatPollResponse.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Common\\Response\\ChatPollResponse.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Common\\Response\\ChatPollResponse.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Common\\Response\\ChatPollResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:33:08.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ChatSessionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Common\\Requests\\ChatSessionRequest.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Common\\Requests\\ChatSessionRequest.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Common\\Requests\\ChatSessionRequest.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Common\\Requests\\ChatSessionRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:32:59.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ChatSystem.Chat.Client.csproj",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\ChatSystem.Chat.Client.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-01T20:29:46.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ChatApiClientExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Extensions\\ChatApiClientExtensions.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\Extensions\\ChatApiClientExtensions.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Extensions\\ChatApiClientExtensions.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\Extensions\\ChatApiClientExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:28:15.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ChatApiClientConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Configurations\\ChatApiClientConfiguration.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\Configurations\\ChatApiClientConfiguration.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Configurations\\ChatApiClientConfiguration.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\Configurations\\ChatApiClientConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:28:07.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ChatClient.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Clients\\ChatClient.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\Clients\\ChatClient.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Clients\\ChatClient.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\Clients\\ChatClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:27:55.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ChatSession.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Clients\\Requests\\ChatSession.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\Clients\\Requests\\ChatSession.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Clients\\Requests\\ChatSession.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\Clients\\Requests\\ChatSession.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAA1wDkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:27:14.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "IChatClient.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Abstractions\\IChatClient.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\Abstractions\\IChatClient.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Abstractions\\IChatClient.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\Abstractions\\IChatClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:27:02.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IChatSession.cs",
+              "DocumentMoniker": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Abstractions\\Requests\\IChatSession.cs",
+              "RelativeDocumentMoniker": "ChatSystem.Chat.Client\\Abstractions\\Requests\\IChatSession.cs",
+              "ToolTip": "C:\\Users\\ArditZariqi\\source\\repos\\ChatSystem\\ChatSystem.Chat.Client\\Abstractions\\Requests\\IChatSession.cs",
+              "RelativeToolTip": "ChatSystem.Chat.Client\\Abstractions\\Requests\\IChatSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T20:26:38.943Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 127,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
