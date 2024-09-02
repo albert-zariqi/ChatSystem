@@ -154,6 +154,7 @@ C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\ChatSystem.Chat.API.csproj.CoreCompileInputs.cache
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\ChatSystem.Chat.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\ChatSystem.Chat.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\ChatSystem.Chat.API.sourcelink.json
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.API\obj\Debug\net8.0\staticwebassets\msbuild.ChatSystem.Chat.API.Microsoft.AspNetCore.StaticWebAssets.props

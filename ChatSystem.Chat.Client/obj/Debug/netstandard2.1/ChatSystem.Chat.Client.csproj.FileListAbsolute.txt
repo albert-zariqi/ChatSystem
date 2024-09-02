@@ -10,6 +10,7 @@ C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\ne
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSystem.Chat.Client.AssemblyInfoInputs.cache
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSystem.Chat.Client.AssemblyInfo.cs
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSystem.Chat.Client.csproj.CoreCompileInputs.cache
+C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSystem.Chat.Client.sourcelink.json
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSyst.EDA5A5E1.Up2Date
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSystem.Chat.Client.dll
 C:\Users\ArditZariqi\source\repos\ChatSystem\ChatSystem.Chat.Client\obj\Debug\netstandard2.1\ChatSystem.Chat.Client.pdb

@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Customer Support Portal";
+}
+
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Welcome to Customer Support Portal</h1>
+    <p>Our team is ready to assist with anything you need! Please click the button below to connect with an agent.</p>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger" role="alert" style="margin-top: 20px;">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    @if (ViewBag.InfoMessage != null)
+    {
+        <div class="alert alert-info" role="alert" style="margin-top: 20px;">
+            @ViewBag.InfoMessage
+        </div>
+    }
+
+    <form action="@Url.Action("StartNewChat", "Home")" method="post">
+        <button type="submit" class="btn btn-primary btn-lg" style="padding: 15px 30px; font-size: 18px; text-transform: uppercase;">
+            Start a New Chat
+        </button>
+    </form>
+</div>

@@ -1,0 +1,209 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+}
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>Support Chat</h2>
+    </div>
+    <div id="agentStatus" class="chat-info">
+        Our agent will be with you shortly.
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <!-- Chat messages will appear here -->
+    </div>
+    <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Waiting for agent to connect..." disabled />
+        <button id="sendMessageButton" disabled>Send</button>
+        <button id="endChatButton" disabled>End Chat</button>
+    </div>
+</div>
+
+<style>
+    .chat-container {
+        width: 400px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+    }
+
+    .chat-header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+    }
+
+    .chat-info {
+        padding: 10px;
+        background-color: #f0f8ff;
+        text-align: center;
+        font-style: italic;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .chat-messages {
+        padding: 10px;
+        height: 300px;
+        overflow-y: scroll;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .message {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 70%;
+    }
+
+        .message.agent {
+            background-color: #e9e9e9;
+            margin-left: 10px;
+        }
+
+        .message.user {
+            background-color: #007bff;
+            color: #fff;
+            margin-left: auto;
+            margin-right: 10px;
+            text-align: right;
+        }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        background-color: #fff;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .chat-input button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .chat-input button:hover {
+                background-color: #0056b3;
+            }
+
+        .chat-input input:disabled {
+            background-color: #e9e9e9;
+            cursor: not-allowed;
+        }
+
+        .chat-input button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+</style>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.2/signalr.min.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
+
+        connection.on("ReceiveChatResponse", function (response) {
+            console.log(response);
+            var agentStatus = document.getElementById("agentStatus");
+            var chatMessages = document.getElementById("chatMessages");
+
+            agentStatus.innerHTML = "Agent " + response.agentName + " has connected.";
+            document.getElementById("messageInput").placeholder = "Type your message here...";
+            document.getElementById("messageInput").disabled = false;
+            document.getElementById("sendMessageButton").disabled = false;
+            document.getElementById("endChatButton").disabled = false;
+        });
+
+        connection.start().catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        document.getElementById("sendMessageButton").addEventListener("click", function () {
+            var message = document.getElementById("messageInput").value;
+            if (message.trim() !== "") {
+                var chatMessages = document.getElementById("chatMessages");
+                var userMessage = document.createElement("div");
+                userMessage.className = "message user";
+                userMessage.innerHTML = "<p>" + message + "</p>";
+                chatMessages.appendChild(userMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                document.getElementById("messageInput").value = "";
+            }
+        });
+
+        document.getElementById("messageInput").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                document.getElementById("sendMessageButton").click();
+            }
+        });
+
+        document.getElementById("endChatButton").addEventListener("click", function () {
+            // Extract sessionId from the query string
+            var urlParams = new URLSearchParams(window.location.search);
+            var sessionId = urlParams.get('SessionId'); // Assuming the query string parameter is named "sessionId"
+
+            if (sessionId) {
+                // Send a POST request to the server to end the chat session
+                fetch('/Chat/EndSession?SessionId=' + encodeURIComponent(sessionId), {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                        throw new Error('Network response was not ok.');
+                    })
+                    .then(data => {
+                        console.log('Chat session ended successfully:', data);
+                        // Optionally, you can redirect the user or show a "Chat ended" message
+                        var agentStatus = document.getElementById("agentStatus");
+                        agentStatus.innerHTML = "You have ended the chat session.";
+                        document.getElementById("messageInput").disabled = true;
+                        document.getElementById("sendMessageButton").disabled = true;
+                        document.getElementById("endChatButton").disabled = true;
+                        window.location.href = '/Home/Index';
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the end chat request:', error);
+                    });
+            } else {
+                console.error("Session ID not found in query string.");
+            }
+        });
+    </script>
+}
