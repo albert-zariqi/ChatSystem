@@ -1,5 +1,5 @@
 # Chat System
-A distributed system designed to manage and monitor chat sessions efficiently, with a focus on scalability and fault tolerance.
+A distributed system designed to manage and monitor chat sessions efficiently, with a focus on scalability.
 
 ## Key Features
 - **ASP.NET Core**
@@ -55,3 +55,4 @@ This software utilizes the following open-source technologies:
 - RabbitMQ
 - Docker
 - Serilog
+- Quartz
