@@ -8,6 +8,7 @@
         public int EndHour { get; set; }
         public int EndMinute { get; set; }
         public string TimezoneId { get; set; }
+
         public bool IsDuringOfficeHours()
         {
             if (StartHour >= 9 && StartMinute >= 0 && EndHour >= 14 && EndMinute < 0)
@@ -21,17 +22,7 @@
             return IsDuringOfficeHours();
         }
 
-        public bool IsOverNormalCapacity(int currentCapacity)
-        {
-            return currentCapacity >= GetShiftNormalCapacity();
-        }
-
-        public bool IsOverOverflowCapacity(int currentCapacity)
-        {
-            return currentCapacity >= GetShiftOverflowCapacity();
-        }
-
-        public int GetShiftNormalCapacity()
+        public int GetNormalConcurrentChatLimit()
         {
             var maximumConcurrencyNumber = 10;
             var mainTeam = Teams.Where(x => x.IsMainTeam).Single();
@@ -55,25 +46,43 @@
             return normalCapacity;
         }
 
-        public int GetShiftOverflowCapacity()
+        public int GetNormalQueueLimit()
+        {
+            return (int)(GetNormalConcurrentChatLimit() * 1.5);
+        }
+
+        public int GetOverflowQueueLimit()
+        {
+            return (int)(GetOverflowConcurrentChatLimit() * 1.5);
+        }
+
+        public int GetOverflowConcurrentChatLimit()
         {
             if (!IsDuringOfficeHours())
-                return 0;
+                return GetNormalConcurrentChatLimit();
 
             var maximumConcurrencyNumber = 10;
             var juniorLevelFactor = 0.4;
-            var normalCapacity = GetShiftNormalCapacity();
+            var normalCapacity = GetNormalQueueLimit();
             var overflowAgents = Teams.Where(x => !x.IsMainTeam).Count();
-            var newCapacity = (int)(normalCapacity + (overflowAgents * maximumConcurrencyNumber * juniorLevelFactor));
-
-            return newCapacity;
+            var newMaxConcurrentChats = (int)(normalCapacity + (overflowAgents * maximumConcurrencyNumber * juniorLevelFactor));
+            return newMaxConcurrentChats;
         }
+
+        public bool IsOverNormalQueueCapacity(int currentActiveSessions)
+        {
+            return currentActiveSessions >= GetNormalQueueLimit();
+        }
+
+        public bool IsOverOverflowQueueCapacity(int currentActiveSessions)
+        {
+            return currentActiveSessions >= GetOverflowQueueLimit();
+        }
+
 
         #region Navigation Properties
 
         public List<Team> Teams { get; set; }
         #endregion
-
-
     }
 }

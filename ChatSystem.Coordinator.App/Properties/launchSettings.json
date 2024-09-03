@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "CustomerSupport.Coordinator.App": {
+    "ChatSystem.Coordinator.App": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

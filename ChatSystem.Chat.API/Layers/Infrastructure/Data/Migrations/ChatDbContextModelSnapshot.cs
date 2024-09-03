@@ -22,7 +22,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Agent", b =>
             {
                 b.Property<Guid>("Id")
                     .HasColumnType("uniqueidentifier");
@@ -74,7 +74,48 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.ToTable("Agents");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.ChatSession", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.ChatMessage", b =>
+            {
+                b.Property<Guid>("Id")
+                    .HasColumnType("uniqueidentifier");
+
+                b.Property<string>("CreatedBy")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.Property<DateTimeOffset>("CreatedOn")
+                    .HasColumnType("datetimeoffset");
+
+                b.Property<string>("LastModifiedBy")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.Property<DateTimeOffset?>("LastModifiedOn")
+                    .HasColumnType("datetimeoffset");
+
+                b.Property<string>("Message")
+                    .IsRequired()
+                    .HasMaxLength(1000)
+                    .HasColumnType("nvarchar(1000)");
+
+                b.Property<string>("Sender")
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnType("nvarchar(100)");
+
+                b.Property<Guid>("SessionId")
+                    .HasColumnType("uniqueidentifier");
+
+                b.Property<string>("Type")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
+
+                b.HasKey("Id");
+
+                b.ToTable("ChatMessages");
+            });
+
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.ChatSession", b =>
             {
                 b.Property<Guid>("Id")
                     .HasColumnType("uniqueidentifier");
@@ -113,7 +154,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.ToTable("ChatSessions");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Seniority", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Seniority", b =>
             {
                 b.Property<Guid>("Id")
                     .HasColumnType("uniqueidentifier");
@@ -145,7 +186,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.ToTable("Seniorities");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Shift", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Shift", b =>
             {
                 b.Property<Guid>("Id")
                     .HasColumnType("uniqueidentifier");
@@ -191,7 +232,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.ToTable("Shifts");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Team", b =>
             {
                 b.Property<Guid>("Id")
                     .HasColumnType("uniqueidentifier");
@@ -230,15 +271,15 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.ToTable("Teams");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Agent", b =>
             {
-                b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Seniority", "Seniority")
+                b.HasOne("ChatSystem.Chat.API.Layers.Domain.Entities.Seniority", "Seniority")
                     .WithMany()
                     .HasForeignKey("SeniorityId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
 
-                b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", "Team")
+                b.HasOne("ChatSystem.Chat.API.Layers.Domain.Entities.Team", "Team")
                     .WithMany("Agents")
                     .HasForeignKey("TeamId")
                     .OnDelete(DeleteBehavior.Cascade)
@@ -249,16 +290,16 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.Navigation("Team");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.ChatSession", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.ChatSession", b =>
             {
-                b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", null)
+                b.HasOne("ChatSystem.Chat.API.Layers.Domain.Entities.Agent", null)
                     .WithMany("ChatSessions")
                     .HasForeignKey("AgentId");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Team", b =>
             {
-                b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Shift", "Shift")
+                b.HasOne("ChatSystem.Chat.API.Layers.Domain.Entities.Shift", "Shift")
                     .WithMany("Teams")
                     .HasForeignKey("ShiftId")
                     .OnDelete(DeleteBehavior.Cascade)
@@ -267,17 +308,17 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.Navigation("Shift");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Agent", b =>
             {
                 b.Navigation("ChatSessions");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Shift", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Shift", b =>
             {
                 b.Navigation("Teams");
             });
 
-            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", b =>
+            modelBuilder.Entity("ChatSystem.Chat.API.Layers.Domain.Entities.Team", b =>
             {
                 b.Navigation("Agents");
             });

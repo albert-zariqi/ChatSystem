@@ -37,6 +37,18 @@ namespace ChatSystem.Coordinator.App.Consumers
         {
             var message = context.Message;
 
+            var shiftRealTimeInfo = await _cachingService.GetAsync<ShiftCapacityCacheModel>(ShiftCachingKeys.CapacityByShift(message.ShiftId));
+
+            if (shiftRealTimeInfo.OverConcurrencyLimit())
+            {
+                await _redisQueue.Push(new StackExchange.Redis.RedisKey("WaitingQueue"), JsonConvert.SerializeObject(new WaitingSessionModel
+                {
+                    SessionId = message.SessionId,
+                    ShiftId = message.ShiftId,
+                }));
+                return;
+            }
+
             var activeAgentsInShift = await _cachingService.GetAsync<List<AgentsInShiftCacheModel>>(ShiftCachingKeys.AgentsInShift(message.ShiftId));
 
             if (activeAgentsInShift == null)

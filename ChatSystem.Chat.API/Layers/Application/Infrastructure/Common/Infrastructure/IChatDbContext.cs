@@ -12,9 +12,11 @@ namespace ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Infrastru
         DbSet<Shift> Shifts { get; set; }
         DbSet<Agent> Agents { get; set; }
         DbSet<ChatSession> ChatSessions { get; set; }
+        DbSet<ChatMessage> ChatMessages { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         int SaveChanges();
         ChangeTracker ChangeTracker { get; }
         DatabaseFacade Database { get; }
+
     }
 }

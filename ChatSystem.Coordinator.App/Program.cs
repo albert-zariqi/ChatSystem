@@ -9,6 +9,7 @@ using ChatSystem.Chat.Client.Extensions;
 using ChatSystem.Chat.Client.Configurations;
 using ChatSystem.Coordinator.App.Services;
 
+
 var host = Host.CreateDefaultBuilder(args)
     .ConfigureHostConfiguration(configHost => configHost.AddEnvironmentVariables())
     .ConfigureAppConfiguration((context, config) =>

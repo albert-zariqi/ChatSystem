@@ -8,12 +8,12 @@ namespace ChatSystem.Chat.API.Layers.Application.Shifts.Queries
 {
     public class GetShiftCapacityQuery : IRequest<ShiftCapacityResponse>
     {
+        public Guid ShiftId { get; }
+
         public GetShiftCapacityQuery(Guid shiftId)
         {
             ShiftId = shiftId;
         }
-
-        public Guid ShiftId { get; }
 
         public class GetShiftCapacityQueryHandler : IRequestHandler<GetShiftCapacityQuery, ShiftCapacityResponse>
         {
@@ -41,8 +41,10 @@ namespace ChatSystem.Chat.API.Layers.Application.Shifts.Queries
 
                 return new ShiftCapacityResponse
                 {
-                    MaxCapacity = shift.GetShiftOverflowCapacity(),
-                    NormalCapacity = shift.GetShiftNormalCapacity(),
+                    NormalQueueCapacity = shift.GetNormalQueueLimit(),
+                    NormalConcurrentChatCapacity = shift.GetNormalConcurrentChatLimit(),
+                    OverflowConcurrentChatCapacity = shift.GetOverflowConcurrentChatLimit(),
+                    OverflowQueueCapacity = shift.GetOverflowQueueLimit(),
                     HasOverflowAgents = shift.Teams.Where(x => !x.IsMainTeam).Count() > 0
                 };
             }

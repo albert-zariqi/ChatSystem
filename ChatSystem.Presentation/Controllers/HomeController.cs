@@ -65,6 +65,8 @@ namespace ChatSystem.Presentation.Controllers
 
             await scheduler.ScheduleJob(jobDetail, trigger);
 
+            _chatSessionManager.AddSession(response.Data.SessionId.Value);
+
             return RedirectToAction("Index", "Chat", new { SessionId = response.Data.SessionId });
         }
 

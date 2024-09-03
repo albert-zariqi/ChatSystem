@@ -12,6 +12,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<Agent> Agents { get; set; }
         public DbSet<ChatSession> ChatSessions { get; set; }
+        public DbSet<ChatMessage> ChatMessages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

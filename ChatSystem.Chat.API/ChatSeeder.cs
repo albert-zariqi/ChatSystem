@@ -62,6 +62,14 @@ namespace ChatSystem.Chat.API
                 OverflowAgentsRequested = false,
             });
 
+            await _cachingService.SetAsync(cacheKey, new ShiftCapacityCacheModel
+            {
+                CurrentActiveSessions = 0,
+                MaximumConcurrentSessions = shift.GetNormalConcurrentChatLimit(),
+                MaximumQueueSize = shift.GetNormalQueueLimit(),
+                OverflowAgentsRequested = true
+            });
+
             // Agents in Shift
             List<AgentsInShiftCacheModel> agentsInShift = shift!.Teams.Where(x => x.IsMainTeam).FirstOrDefault()!.Agents.Select(x => new AgentsInShiftCacheModel
             {
@@ -83,6 +91,7 @@ namespace ChatSystem.Chat.API
             await _context.Teams.ExecuteDeleteAsync();
             await _context.Shifts.ExecuteDeleteAsync();
             await _context.Seniorities.ExecuteDeleteAsync();
+            await _context.ChatSessions.ExecuteDeleteAsync();
             // Shifts
             TimeZoneInfo timeZoneInfo = TimeZoneInfo.Local;
             var officeHoursShift = (await _context.Shifts.AddAsync(new Layers.Domain.Entities.Shift

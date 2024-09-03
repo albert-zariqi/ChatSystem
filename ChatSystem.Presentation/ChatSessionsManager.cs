@@ -6,10 +6,9 @@ namespace ChatSystem.Presentation
     {
         private readonly ConcurrentDictionary<Guid, (bool IsActive, DateTime ExpiryDate)> _sessions = new();
 
-        public void AddSession(Guid sessionId, TimeSpan duration)
+        public void AddSession(Guid sessionId)
         {
-            var expiryDate = DateTime.UtcNow.Add(duration);
-            _sessions.TryAdd(sessionId, (true, expiryDate));
+            _sessions.TryAdd(sessionId, (true, DateTime.UtcNow.AddDays(1)));
         }
 
         public bool SessionExists(Guid sessionId)
@@ -43,17 +42,6 @@ namespace ChatSystem.Presentation
                     yield return sessionId;
                 }
             }
-        }
-
-        public bool TryExtendSession(Guid sessionId, TimeSpan additionalTime)
-        {
-            if (_sessions.TryGetValue(sessionId, out var sessionInfo))
-            {
-                var newExpiryDate = sessionInfo.ExpiryDate.Add(additionalTime);
-                _sessions[sessionId] = (sessionInfo.IsActive, newExpiryDate);
-                return true;
-            }
-            return false;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace ChatSystem.Chat.Client.Abstractions.Requests
     public interface IChatSession
     {
         Task<ResponseResult<ChatSessionResponse>> CreateNewChatSession(bool throwOnException = true);
-        Task<ResponseResult<ChatPollResponse>> PollSession(Guid session, bool throwOnException = true);
+        Task<ResponseResult> SendChatMessage(Guid sessionId, ChatMessageRequest request, bool throwOnException = true);
+        Task<ResponseResult<List<MessageResponse>>> GetMessages(Guid sessionId, bool throwOnException = true);
     }
 }

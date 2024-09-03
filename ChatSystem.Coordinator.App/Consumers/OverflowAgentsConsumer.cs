@@ -36,9 +36,12 @@ namespace ChatSystem.Coordinator.App.Consumers
                 return;
 
             // Shift Capacity
+            var shiftInfo = await _chatClient.Shift.GetShiftCapacity(message.ShiftId);
             await _cachingService.SetAsync(cacheKey, new ShiftCapacityCacheModel
             {
                 CurrentActiveSessions = shiftCapacityCacheModel.CurrentActiveSessions,
+                MaximumConcurrentSessions = shiftInfo.Data.OverflowConcurrentChatCapacity,
+                MaximumQueueSize = shiftInfo.Data.OverflowQueueCapacity,
                 OverflowAgentsRequested = true
             });
         }

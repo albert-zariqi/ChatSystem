@@ -1,0 +1,113 @@
+version: '3.4'
+
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: ./ChatSystem.ApiGateway/Dockerfile
+    hostname: gateway-api
+    ports: 
+      - "8051:8080"
+    depends_on:
+      - chat-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "Routes__0__DownstreamScheme=http" 
+      - "Routes__0__DownstreamHostAndPorts__0__Host=chat-api" 
+      - "Routes__0__DownstreamHostAndPorts__0__Port=8080"  
+    networks:
+      - app-network
+
+  chat-front-app:
+    build:
+      context: .
+      dockerfile: ./ChatSystem.Presentation/Dockerfile
+    hostname: chat-api
+    ports:
+     - "8061:8080"
+    depends_on:
+     - redis-cache
+     - chat-api
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Development
+     - "ConnectionStrings__RedisConnection=redis-cache:6379"
+     - "ChatApiClientConfiguration__BaseUrl=http://gateway-api:8080/chat/" 
+    networks:
+     - app-network
+    restart: unless-stopped
+
+  chat-api:
+    build:
+      context: .
+      dockerfile: ./ChatSystem.Chat.API/Dockerfile
+    hostname: chat-api
+    ports:
+     - "8071:8080"
+    depends_on:
+     - db
+     - redis-cache
+     - rabbitmq
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Development
+     - "RabbitMqConfiguration__HostName=lepuri"
+     - "RabbitMqConfiguration__Username=guest"
+     - "RabbitMqConfiguration__Password=guest"
+     - "ConnectionStrings__DatabaseConnection=Server=db;Database=ChatDb;User Id=sa;Password=r00t.R00T;Trust Server Certificate=True"
+     - "ConnectionStrings__RedisConnection=redis-cache:6379"
+    networks:
+     - app-network
+    restart: unless-stopped
+
+  chat-coordinator-app:
+    build:
+      context: .
+      dockerfile: ./ChatSystem.Coordinator.App/Dockerfile
+    hostname: chat-coordinator-app
+    depends_on:
+     - db
+     - chat-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "RabbitMqConfiguration__HostName=lepuri"
+      - "RabbitMqConfiguration__Username=guest"
+      - "RabbitMqConfiguration__Password=guest"
+      - "ConnectionStrings__RedisConnection=redis-cache:6379"
+    networks:
+     - app-network
+    restart: unless-stopped
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: r00t.R00T
+      ACCEPT_EULA: 'Y'
+    ports:
+      - "1434:1433"
+    networks:
+      - app-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: lepuri
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - app-network
+
+  redis-cache:
+    image: redis:latest
+    container_name: redis_container
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+    volumes:
+      - redis_data:/data
+
+networks:
+  app-network:
+
+volumes:
+  redis_data:
+    

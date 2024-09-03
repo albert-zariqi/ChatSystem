@@ -17,4 +17,10 @@ namespace ChatSystem.Caching.Queue.SessionQueue
         AgentDisconnected = 1,
         AgentInfo = 2,
     }
+
+    public class WaitingSessionModel
+    {
+        public Guid SessionId { get; set; }
+        public Guid ShiftId { get; set; }
+    }
 }

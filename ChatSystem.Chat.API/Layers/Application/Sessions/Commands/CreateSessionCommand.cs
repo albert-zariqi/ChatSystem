@@ -41,7 +41,7 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
             {
                 TimeOnly currentTime = TimeOnly.FromDateTime(DateTime.Now);
 
-                var shift = await _chatDbContext.Shifts
+                Shift shift = await _chatDbContext.Shifts
                     .Where(x =>
                         (x.StartHour < x.EndHour && currentTime.Hour >= x.StartHour && currentTime.Hour <= x.EndHour) ||
                         (x.StartHour > x.EndHour &&
@@ -52,10 +52,9 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                     .ThenInclude(x => x.Seniority)
                     .SingleOrDefaultAsync() ?? throw new AppException(new Utils.Errors.CustomError(System.Net.HttpStatusCode.NotFound, "shift_not_found", "Shift not found"));
 
-                //var shift = await GetShiftByCurrentTime();
-                var shiftInformation = await GetShiftRealTimeInformation(shift.Id);
+                var shiftInformation = await GetShiftRealTimeInformation(shift);
 
-                if (!shift.IsOverNormalCapacity(shiftInformation.CurrentActiveSessions))
+                if (!shift.IsOverNormalQueueCapacity(shiftInformation.CurrentActiveSessions))
                 {
                     ChatSession session = new ChatSession(shift.Id);
                     await _chatDbContext.ChatSessions.AddAsync(session);
@@ -70,9 +69,9 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                     };
                 }
 
-                if (shift.IsDuringOfficeHours() && !shiftInformation.OverflowAgentsRequested)
+                if (shift.IsDuringOfficeHours())
                 {
-                    if (shift.IsOverOverflowCapacity(shiftInformation.CurrentActiveSessions))
+                    if (shift.IsOverOverflowQueueCapacity(shiftInformation.CurrentActiveSessions))
                     {
                         return new ChatSessionResponse
                         {
@@ -85,7 +84,10 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                     await _chatDbContext.ChatSessions.AddAsync(session);
                     await _chatDbContext.SaveChangesAsync();
                     await PublishNewSessionCreatedEvent(session);
-                    await RequestOverflowAgents(shift.Id);
+                    if (!shiftInformation.OverflowAgentsRequested)
+                    {
+                        await RequestOverflowAgents(shift.Id);
+                    }
 
                     return new ChatSessionResponse
                     {
@@ -93,7 +95,6 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                         Available = true
                     };
                 }
-
 
                 return new ChatSessionResponse
                 {
@@ -116,9 +117,9 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                 return currentCapacity >= maxCapacity;
             }
 
-            public async Task<ShiftCapacityCacheModel> GetShiftRealTimeInformation(Guid shiftId)
+            public async Task<ShiftCapacityCacheModel> GetShiftRealTimeInformation(Shift shift)
             {
-                var shiftCapacityKey = ShiftCachingKeys.CapacityByShift(shiftId);
+                var shiftCapacityKey = ShiftCachingKeys.CapacityByShift(shift.Id);
                 var cacheModel = await _cachingService.GetAsync<ShiftCapacityCacheModel?>(shiftCapacityKey);
 
                 // Means no capacity has been calculated yet.
@@ -128,6 +129,8 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                     cacheModel = new ShiftCapacityCacheModel
                     {
                         CurrentActiveSessions = 0,
+                        MaximumConcurrentSessions = shift.GetNormalConcurrentChatLimit(),
+                        MaximumQueueSize = shift.GetOverflowQueueLimit(),
                         OverflowAgentsRequested = false
                     };
                     await _cachingService.SetAsync(shiftCapacityKey, cacheModel);

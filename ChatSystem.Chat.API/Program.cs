@@ -2,7 +2,6 @@ using ChatSystem.Chat.API.Handlers;
 using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Infrastructure;
 using ChatSystem.Chat.API.Layers.Infrastructure;
 using ChatSystem.Chat.API;
-using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using ChatSystem.Chat.API.Extensions;
 using ChatSystem.Chat.API.Layers.Application.Configurations;

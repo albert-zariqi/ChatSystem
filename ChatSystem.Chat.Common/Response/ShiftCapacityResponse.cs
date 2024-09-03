@@ -6,8 +6,12 @@ namespace ChatSystem.Chat.Common.Response
 {
     public class ShiftCapacityResponse
     {
-        public int NormalCapacity { get; set; }
-        public int MaxCapacity { get; set; }
+        public int NormalQueueCapacity { get; set; }
+        public int NormalConcurrentChatCapacity { get; set; }
+        public int OverflowConcurrentChatCapacity { get; set; }
+        public int OverflowQueueCapacity { get; set; }
         public bool HasOverflowAgents { get; set; }
+
+
     }
 }

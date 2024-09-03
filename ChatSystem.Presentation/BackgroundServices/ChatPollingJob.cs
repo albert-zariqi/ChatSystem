@@ -13,16 +13,19 @@ namespace ChatSystem.Presentation.BackgroundServices
         private readonly IChatClient _chatPollingClient;
         private readonly IHubContext<ChatHub> _hubContext;
         private readonly IRedisQueue _redisQueue;
+        private readonly IChatClient _chatClient;
 
         public ChatPollingJob(
             IChatClient chatPollingClient,
             IHubContext<ChatHub> hubContext,
-            IRedisQueue redisQueue
+            IRedisQueue redisQueue,
+            IChatClient chatClient
             )
         {
             _chatPollingClient = chatPollingClient;
             _hubContext = hubContext;
             _redisQueue = redisQueue;
+            _chatClient = chatClient;
         }
 
         public async Task Execute(IJobExecutionContext context)
@@ -37,9 +40,22 @@ namespace ChatSystem.Presentation.BackgroundServices
                 return;
 
             var deserializedObject = JsonSerializer.Deserialize<SessionQueueModel>(result!)!;
-
+            var persistMessageTask = _chatClient.ChatSession.SendChatMessage(Guid.Parse(sessionId), new ChatSystem.Chat.Common.Requests.ChatMessageRequest
+            {
+                FromAgent = true,
+                Message = deserializedObject.Payload,
+                Sender = deserializedObject.Agent
+            });
             // Handle the result of polling
-            await _hubContext.Clients.All.SendAsync("ReceiveChatResponse", new ChatResponse { AgentName = deserializedObject.Agent, Message = deserializedObject.Payload });
+            var sendToSignalRTask = _hubContext.Clients.All.SendAsync("ReceiveChatResponse",
+            new ChatResponse
+            {
+                AgentName = deserializedObject.Agent,
+                Message = deserializedObject.Payload,
+                Type = deserializedObject.Type.ToString()
+            });
+
+            await Task.WhenAll(persistMessageTask, sendToSignalRTask);
         }
     }
 }

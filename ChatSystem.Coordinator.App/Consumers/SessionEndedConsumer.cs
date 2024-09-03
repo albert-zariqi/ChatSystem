@@ -1,11 +1,14 @@
 ﻿using ChatSystem.Caching.CachingKeys;
 using ChatSystem.Caching.Models;
+using ChatSystem.Caching.Queue.SessionQueue;
 using ChatSystem.Chat.Client.Abstractions;
 using ChatSystem.Coordinator.App.Services;
 using ChatSystem.Messaging.Sessions;
 using ChatSystem.Utils.Errors;
 using ChatSystem.Utils.Exceptions;
 using MassTransit;
+using Newtonsoft.Json;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,16 +22,19 @@ namespace ChatSystem.Coordinator.App.Consumers
         private readonly IChatClient _chatClient;
         private readonly ICachingService _cachingService;
         private readonly IRedisQueue _redisQueue;
+        private readonly IPublishEndpoint _publishEndpoint;
 
         public SessionEndedConsumer(
             IChatClient chatClient,
             ICachingService cachingService,
-            IRedisQueue redisQueue
+            IRedisQueue redisQueue,
+            IPublishEndpoint publishEndpoint
             )
         {
             _chatClient = chatClient;
             _cachingService = cachingService;
             _redisQueue = redisQueue;
+            _publishEndpoint = publishEndpoint;
         }
 
         public async Task Consume(ConsumeContext<SessionEndedMessage> context)
@@ -49,6 +55,18 @@ namespace ChatSystem.Coordinator.App.Consumers
 
             // Overwrite the previous list
             await _cachingService.SetAsync(ShiftCachingKeys.AgentsInShift(message.ShiftId), activeAgentsInShift);
+
+            // "Re-create" the session the waiting list
+            var waitingSession = await _redisQueue.Pop(new RedisKey("WaitingQueue"));
+            if (waitingSession.HasValue)
+            {
+                var waitingSessionValue = JsonConvert.DeserializeObject<WaitingSessionModel>(waitingSession!)!;
+                await _publishEndpoint.Publish(new SessionCreatedMessage
+                {
+                    SessionId = waitingSessionValue.SessionId,
+                    ShiftId = waitingSessionValue.ShiftId,
+                });
+            }
 
         }
     }

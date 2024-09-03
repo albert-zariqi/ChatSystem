@@ -46,6 +46,30 @@ namespace ChatSystem.Chat.Client.Clients.Requests
             return responseResult;
         }
 
+        public async Task<ResponseResult<List<MessageResponse>>> GetMessages(Guid sessionId, bool throwOnException = true)
+        {
+            var client = _httpClientFactory.CreateClient("ChatClient");
+
+            var response = await client.GetAsync($"api/v1/ChatSession/{sessionId}/messages");
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            var responseResult = new ResponseResult<List<MessageResponse>>(response.IsSuccessStatusCode, response.StatusCode, content);
+            if (!responseResult.IsSuccessStatusCode)
+            {
+                if (responseResult.ProblemDetails != null && throwOnException)
+                {
+                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ProblemDetails.Title, responseResult.ProblemDetails.Detail));
+                }
+
+                if (throwOnException)
+                {
+                    throw new AppException(GenericErrors.ThirdPartyFailure);
+                }
+            }
+            return responseResult;
+        }
+
         public async Task<ResponseResult> AssignAgent(Guid sessionId, string username, bool throwOnException = true)
         {
             var client = _httpClientFactory.CreateClient("ChatClient");
@@ -70,15 +94,17 @@ namespace ChatSystem.Chat.Client.Clients.Requests
             return responseResult;
         }
 
-        public async Task<ResponseResult<ChatPollResponse>> PollSession(Guid session, bool throwOnException = true)
+        public async Task<ResponseResult> SendChatMessage(Guid sessionId, ChatMessageRequest request, bool throwOnException = true)
         {
             var client = _httpClientFactory.CreateClient("ChatClient");
 
-            var response = await client.GetAsync($"api/v1/ChatSession/poll");
+            string jsonString = JsonSerializer.Serialize(request);
+            var stringContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync($"api/v1/ChatSession/{sessionId}/newmessage", stringContent);
 
             var content = await response.Content.ReadAsStringAsync();
 
-            var responseResult = new ResponseResult<ChatPollResponse>(response.IsSuccessStatusCode, response.StatusCode, content);
+            var responseResult = new ResponseResult(response.IsSuccessStatusCode, response.StatusCode, content);
             if (!responseResult.IsSuccessStatusCode)
             {
                 if (responseResult.ProblemDetails != null && throwOnException)
