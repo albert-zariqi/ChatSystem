@@ -20,7 +20,7 @@ namespace ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Behaviors
             var userId = _user.UserId ?? string.Empty;
             string? userName = _user.Username;
 
-            _logger.LogInformation("OrdersAPI MediatR Request: {Name} {@UserId} {@UserName} {@Request}",
+            _logger.LogInformation("ChatAPI MediatR Request: {Name} {@UserId} {@UserName} {@Request}",
                 requestName, userId, userName, request);
         }
     }

@@ -94,6 +94,30 @@ namespace ChatSystem.Chat.Client.Clients.Requests
             return responseResult;
         }
 
+        public async Task<ResponseResult> EndSession(Guid sessionId, bool throwOnException = true)
+        {
+            var client = _httpClientFactory.CreateClient("ChatClient");
+
+            var response = await client.PostAsync($"api/v1/ChatSession/end/{sessionId}", null);
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            var responseResult = new ResponseResult(response.IsSuccessStatusCode, response.StatusCode, content);
+            if (!responseResult.IsSuccessStatusCode)
+            {
+                if (responseResult.ProblemDetails != null && throwOnException)
+                {
+                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ProblemDetails.Title, responseResult.ProblemDetails.Detail));
+                }
+
+                if (throwOnException)
+                {
+                    throw new AppException(GenericErrors.ThirdPartyFailure);
+                }
+            }
+            return responseResult;
+        }
+
         public async Task<ResponseResult> SendChatMessage(Guid sessionId, ChatMessageRequest request, bool throwOnException = true)
         {
             var client = _httpClientFactory.CreateClient("ChatClient");

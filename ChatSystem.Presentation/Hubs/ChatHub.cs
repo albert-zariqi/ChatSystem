@@ -16,6 +16,16 @@ namespace ChatSystem.Presentation.Hubs
             await Clients.All.SendAsync("ReceiveChatResponse", response);
         }
 
+        public async Task SubscribeToGroup(string sessionId)
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, sessionId);
+        }
+
+        public async Task UnsubscribeFromGroup(string sessionId)
+        {
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, sessionId);
+        }
+
     }
 
     public class ChatResponse

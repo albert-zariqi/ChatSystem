@@ -24,7 +24,7 @@ namespace ChatSystem.Chat.API
 
         public ChatDbContext CreateContext()
         {
-            // Create an instance of DbContextOptionsBuilder for InsrdDbContext
+            // Create an instance of DbContextOptionsBuilder for ChatDbContext
             var optionsBuilder = new DbContextOptionsBuilder<ChatDbContext>();
 
             // Configure the options to use SQL Server with the connection string
@@ -33,7 +33,7 @@ namespace ChatSystem.Chat.API
             // Add your interceptor
             optionsBuilder.AddInterceptors(new AuditableEntityInterceptor(_currentUserService));
 
-            // Create a new instance of InsrdDbContext with the configured options
+            // Create a new instance of ChatDbContext with the configured options
             return new ChatDbContext(optionsBuilder.Options);
         }
 

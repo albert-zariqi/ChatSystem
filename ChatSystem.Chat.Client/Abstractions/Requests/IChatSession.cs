@@ -13,5 +13,6 @@ namespace ChatSystem.Chat.Client.Abstractions.Requests
         Task<ResponseResult<ChatSessionResponse>> CreateNewChatSession(bool throwOnException = true);
         Task<ResponseResult> SendChatMessage(Guid sessionId, ChatMessageRequest request, bool throwOnException = true);
         Task<ResponseResult<List<MessageResponse>>> GetMessages(Guid sessionId, bool throwOnException = true);
+        Task<ResponseResult> EndSession(Guid sessionId, bool throwOnException = true);
     }
 }

@@ -16,6 +16,7 @@ namespace ChatSystem.Caching.Queue.SessionQueue
         AgentAssigned = 0,
         AgentDisconnected = 1,
         AgentInfo = 2,
+        Inactivity = 3,
     }
 
     public class WaitingSessionModel

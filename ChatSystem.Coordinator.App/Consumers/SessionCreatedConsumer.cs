@@ -61,11 +61,17 @@ namespace ChatSystem.Coordinator.App.Consumers
 
             // Overwrite the previous list
             await _cachingService.SetAsync(ShiftCachingKeys.AgentsInShift(message.ShiftId), activeAgentsInShift);
+            await _cachingService.SetAsync(SessionCachingKeys.SessionInShift(message.SessionId), new SessionInShiftModel
+            {
+                ShiftId = message.ShiftId,
+                LastActivityTime = DateTimeOffset.UtcNow
+            });
+
             await _redisQueue.Push(new StackExchange.Redis.RedisKey(message.SessionId.ToString()), JsonConvert.SerializeObject(new SessionQueueModel
             {
                 Agent = agent.Username,
                 Payload = $"Agent {agent.Username} has connected",
-                Type = ChatSessionUpdateType.AgentAssigned
+                Type = ChatSessionUpdateType.AgentAssigned,
             }));
 
         }

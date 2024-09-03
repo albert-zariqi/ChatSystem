@@ -58,7 +58,7 @@ namespace ChatSystem.Presentation.Controllers
                 .Build();
 
             var trigger = TriggerBuilder.Create()
-                .WithIdentity("ChatPollingTrigger", "PollingGroup")
+                .WithIdentity($"{response.Data.SessionId.ToString()}-PollingTrigger", "PollingGroup")
                 .StartNow()
                 .WithSimpleSchedule(x => x.WithIntervalInSeconds(1).RepeatForever()) // Poll every 10 seconds
                 .Build();

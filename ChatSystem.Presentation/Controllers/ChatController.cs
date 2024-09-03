@@ -46,6 +46,7 @@ namespace ChatSystem.Presentation.Controllers
             }
 
             _chatSessionManager.RemoveSession(sessionId);
+            await _chatClient.ChatSession.EndSession(sessionId);
 
             return Ok(new { message = "Chat session ended successfully." });
         }

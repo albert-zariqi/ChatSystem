@@ -144,6 +144,26 @@
     <script>
         const connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
 
+        connection.start()
+            .then(function () {
+                var urlParams = new URLSearchParams(window.location.search);
+                var sessionId = urlParams.get('SessionId');
+
+                if (sessionId) {
+                    connection.invoke("SubscribeToGroup", sessionId)
+                        .then(function () {
+                            console.log("Successfully subscribed to group '" + sessionId + "'");
+                        }).catch(function (err) {
+                            return console.error(err.toString());
+                        });
+                } else {
+                    console.error("Session ID not found in query string.");
+                }
+            })
+            .catch(function (err) {
+                return console.error(err.toString());
+            });
+
         connection.on("ReceiveChatResponse", function (response) {
             console.log(response);
 
@@ -163,6 +183,29 @@
                     document.getElementById("messageInput").disabled = true;
                     document.getElementById("sendMessageButton").disabled = true;
                     document.getElementById("endChatButton").disabled = true;
+
+
+                    connection.invoke("UnsubscribeFromGroup", sessionId)
+                        .then(function () {
+                            console.log("Disconnected and unsubscribed from group '" + sessionId + "'");
+                        }).catch(function (err) {
+                            return console.error(err.toString());
+                        });
+
+                    break;
+                case "inactivity":
+                    agentStatus.innerHTML = "Session has been closed due to inactivity";
+                    document.getElementById("messageInput").disabled = true;
+                    document.getElementById("sendMessageButton").disabled = true;
+                    document.getElementById("endChatButton").disabled = true;
+
+                    connection.invoke("UnsubscribeFromGroup", sessionId)
+                        .then(function () {
+                            console.log("Disconnected and unsubscribed from group '" + sessionId + "'");
+                        }).catch(function (err) {
+                            return console.error(err.toString());
+                        });
+
                     break;
                 case "agentinfo":
                     var infoMessage = document.createElement("div");
@@ -175,10 +218,6 @@
                     console.warn("Unknown response type:", response.type);
                     break;
             }
-        });
-
-        connection.start().catch(function (err) {
-            return console.error(err.toString());
         });
 
         document.getElementById("sendMessageButton").addEventListener("click", function () {
@@ -241,6 +280,15 @@
                         document.getElementById("messageInput").disabled = true;
                         document.getElementById("sendMessageButton").disabled = true;
                         document.getElementById("endChatButton").disabled = true;
+
+                        // Unsubscribe from the group when the session ends
+                        connection.invoke("UnsubscribeFromGroup", sessionId)
+                            .then(function () {
+                                console.log("Successfully unsubscribed from group '" + sessionId + "'");
+                            }).catch(function (err) {
+                                return console.error(err.toString());
+                            });
+
                         window.location.href = '/Home/Index';
                     })
                     .catch(error => {
@@ -250,5 +298,19 @@
                 console.error("Session ID not found in query string.");
             }
         });
+
+        connection.onclose(function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var sessionId = urlParams.get('SessionId');
+            if (sessionId) {
+                connection.invoke("UnsubscribeFromGroup", sessionId)
+                    .then(function () {
+                        console.log("Disconnected and unsubscribed from group '" + sessionId + "'");
+                    }).catch(function (err) {
+                        return console.error(err.toString());
+                    });
+            }
+        });
     </script>
 }
+
