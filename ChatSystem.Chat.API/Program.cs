@@ -5,6 +5,11 @@ using ChatSystem.Chat.API;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using ChatSystem.Chat.API.Extensions;
+using ChatSystem.Chat.API.Layers.Application.Configurations;
+using MassTransit;
+using ChatSystem.Chat.API.Layers.Application.Consumers;
+using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Application.Services;
+
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -36,6 +41,33 @@ try
         string connection = builder.Configuration.GetConnectionString("RedisConnection")!;
 
         redisOptions.Configuration = connection;
+
+    });
+
+    builder.Services.Configure<RabbitMqConfiguration>(builder.Configuration.GetSection(nameof(RabbitMqConfiguration)));
+    builder.Services.Configure<ConnectionStrings>(builder.Configuration.GetSection(nameof(ConnectionStrings)));
+
+    RabbitMqConfiguration rabbitMqConfiguration = new RabbitMqConfiguration();
+    builder.Configuration.Bind("RabbitMqConfiguration", rabbitMqConfiguration);
+    // Configure MassTransit with RabbitMQ
+    builder.Services.AddMassTransit(x =>
+    {
+        x.AddConsumer<ChatUpdateConsumer>();
+        x.UsingRabbitMq((context, cfg) =>
+        {
+            cfg.Host(rabbitMqConfiguration.HostName, h =>
+            {
+                h.Username(rabbitMqConfiguration.Username);
+                h.Password(rabbitMqConfiguration.Password);
+            });
+
+            cfg.ReceiveEndpoint("chat-update-queue", e =>
+            {
+                e.ConfigureConsumer<ChatUpdateConsumer>(context);
+                e.PrefetchCount = 1;
+            });
+
+        });
 
     });
 
@@ -71,10 +103,10 @@ try
     app.MapControllers();
 
     using var scope = app.Services.CreateScope();
-    //await db.Database.MigrateAsync();
+    var chatSeeder = new ChatSeeder(builder.Configuration.GetConnectionString("DatabaseConnection")!, scope.ServiceProvider.GetRequiredService<ICurrentUserService>(), scope.ServiceProvider.GetRequiredService<ICachingService>());
 
-    var currentUserService = scope.ServiceProvider.GetRequiredService<ICurrentUserService>();
-    await new ChatSeeder(builder.Configuration.GetConnectionString("DatabaseConnection"), currentUserService).SeedDefaultData();
+    await chatSeeder.SeedDefaultData();
+    await chatSeeder.SeedDefaultCache();
 
     app.Run();
 

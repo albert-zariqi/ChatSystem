@@ -10,9 +10,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
     <PackageReference Include="Quartz" Version="3.13.0" />
     <PackageReference Include="Quartz.Extensions.Hosting" Version="3.13.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ChatSystem.Caching\ChatSystem.Caching.csproj" />
     <ProjectReference Include="..\ChatSystem.Chat.Client\ChatSystem.Chat.Client.csproj" />
   </ItemGroup>
 

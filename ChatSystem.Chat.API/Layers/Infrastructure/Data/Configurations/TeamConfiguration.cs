@@ -15,7 +15,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Configurations
             builder.Property(x => x.IsMainTeam).HasDefaultValue(true).IsRequired();
 
             builder.HasOne(x => x.Shift)
-                .WithMany()
+                .WithMany(x => x.Teams)
                 .HasForeignKey(x => x.ShiftId);
 
         }

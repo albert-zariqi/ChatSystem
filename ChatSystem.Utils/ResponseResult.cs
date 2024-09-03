@@ -1,4 +1,5 @@
 ﻿using ChatSystem.Utils.Errors;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -12,7 +13,7 @@ namespace ChatSystem.Utils
         public readonly bool IsSuccessStatusCode;
         public readonly HttpStatusCode StatusCode;
         public readonly string Content;
-        public readonly ErrorDetails ErrorDetails;
+        public readonly ProblemDetails ProblemDetails;
         public ResponseResult(bool isSuccessStatusCode, HttpStatusCode statusCode, string httpContent)
         {
             IsSuccessStatusCode = isSuccessStatusCode;
@@ -25,10 +26,10 @@ namespace ChatSystem.Utils
                 {
                     if (!string.IsNullOrEmpty(httpContent))
                     {
-                        ErrorDetails = JsonSerializer.Deserialize<ErrorDetails>(httpContent, new JsonSerializerOptions
+                        ProblemDetails = JsonSerializer.Deserialize<ProblemDetails>(httpContent, new JsonSerializerOptions
                         {
                             PropertyNameCaseInsensitive = true
-                        });
+                        })!;
                     }
                 }
                 catch (JsonException ex)

@@ -5,7 +5,8 @@
 namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedInitial3 : Migration
+    /// <inheritdoc />
+    public partial class AddedMiggration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -109,8 +110,9 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SessionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
+                    AgentUsername = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    ShiftId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     AgentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CreatedOn = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),

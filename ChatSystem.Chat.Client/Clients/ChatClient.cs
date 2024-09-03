@@ -1,17 +1,20 @@
-﻿using ChatSystem.Chat.Client.Abstractions.Requests;
-using ChatSystem.Coordinator.ApiClient.Abstractions;
+﻿using ChatSystem.Chat.Client.Abstractions;
+using ChatSystem.Chat.Client.Abstractions.Requests;
 
-namespace ChatSystem.Coordinator.ApiClient.Clients
+namespace ChatSystem.Chat.Client.Clients
 {
     public class ChatClient : IChatClient
     {
+        public IChatSession ChatSession { get; }
+        public IShift Shift { get; }
+
         public ChatClient(
-            IChatSession chatSession
+            IChatSession chatSession,
+            IShift shift
             )
         {
             ChatSession = chatSession;
+            Shift = shift;
         }
-
-        public IChatSession ChatSession { get; }
     }
 }

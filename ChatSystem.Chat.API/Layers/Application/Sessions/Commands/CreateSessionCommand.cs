@@ -5,7 +5,10 @@ using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Application.S
 using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Infrastructure;
 using ChatSystem.Chat.API.Layers.Domain.Entities;
 using ChatSystem.Chat.Common.Response;
+using ChatSystem.Messaging.Agents;
+using ChatSystem.Messaging.Sessions;
 using ChatSystem.Utils.Exceptions;
+using MassTransit;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,49 +24,55 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
         {
             private readonly IChatDbContext _chatDbContext;
             private readonly ICachingService _cachingService;
+            private readonly IPublishEndpoint _publishEndpoint;
 
             public CreateSessionCommandHandler(
                 IChatDbContext chatDbContext,
-                ICachingService cachingService
+                ICachingService cachingService,
+                IPublishEndpoint publishEndpoint
                 )
             {
                 _chatDbContext = chatDbContext;
                 _cachingService = cachingService;
+                _publishEndpoint = publishEndpoint;
             }
 
             public async Task<ChatSessionResponse> Handle(CreateSessionCommand request, CancellationToken cancellationToken)
             {
+                TimeOnly currentTime = TimeOnly.FromDateTime(DateTime.Now);
 
-                var shift = await GetShiftByCurrentTime();
-                var shiftCapacity = await GetCurrentCapacity(shift.Id);
+                var shift = await _chatDbContext.Shifts
+                    .Where(x =>
+                        (x.StartHour < x.EndHour && currentTime.Hour >= x.StartHour && currentTime.Hour <= x.EndHour) ||
+                        (x.StartHour > x.EndHour &&
+                            (currentTime.Hour >= x.StartHour || currentTime.Hour <= x.EndHour))
+                    )
+                    .Include(x => x.Teams)
+                    .ThenInclude(x => x.Agents)
+                    .ThenInclude(x => x.Seniority)
+                    .SingleOrDefaultAsync() ?? throw new AppException(new Utils.Errors.CustomError(System.Net.HttpStatusCode.NotFound, "shift_not_found", "Shift not found"));
 
+                //var shift = await GetShiftByCurrentTime();
+                var shiftInformation = await GetShiftRealTimeInformation(shift.Id);
 
-                if (!IsOverCapacity(shiftCapacity.CurrentCapacity, shiftCapacity.MaxCapacity))
+                if (!shift.IsOverNormalCapacity(shiftInformation.CurrentActiveSessions))
                 {
+                    ChatSession session = new ChatSession(shift.Id);
+                    await _chatDbContext.ChatSessions.AddAsync(session);
+                    await _chatDbContext.SaveChangesAsync();
+
+                    await PublishNewSessionCreatedEvent(session);
+
                     return new ChatSessionResponse
                     {
-                        SessionId = Guid.NewGuid(),
+                        SessionId = session.Id,
                         Available = true
                     };
-
-                    // Event: Place this shift in Queue
                 }
 
-                if (shift.IsDuringOfficeHours() && !shiftCapacity.OverflowAgentsRequested)
+                if (shift.IsDuringOfficeHours() && !shiftInformation.OverflowAgentsRequested)
                 {
-                    var overflowAgents = await _chatDbContext.Agents.Include(x => x.Team).Where(x => x.Team.Name == "TEAM_O").CountAsync();
-                    var juniorLevelFactor = await _chatDbContext.Seniorities.Where(x => x.Name == "JUNIOR").Select(x => x.Factor).FirstOrDefaultAsync();
-                    var maximumConcurrencyNumber = 10;
-
-                    var newCapacity = shiftCapacity.MaxCapacity + (overflowAgents * maximumConcurrencyNumber * juniorLevelFactor);
-                    shiftCapacity.MaxCapacity = (int)newCapacity;
-
-                    var shiftCapacityKey = ShiftCachingKeys.CapacityByShift(shift.Id);
-                    await _cachingService.SetAsync(shiftCapacityKey, shiftCapacity, 43200);
-
-                    // Event: Overflow agents requested!
-
-                    if (IsOverCapacity(shiftCapacity.CurrentCapacity, shiftCapacity.MaxCapacity))
+                    if (shift.IsOverOverflowCapacity(shiftInformation.CurrentActiveSessions))
                     {
                         return new ChatSessionResponse
                         {
@@ -72,7 +81,19 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                         };
                     }
 
+                    ChatSession session = new ChatSession(shift.Id);
+                    await _chatDbContext.ChatSessions.AddAsync(session);
+                    await _chatDbContext.SaveChangesAsync();
+                    await PublishNewSessionCreatedEvent(session);
+                    await RequestOverflowAgents(shift.Id);
+
+                    return new ChatSessionResponse
+                    {
+                        SessionId = Guid.NewGuid(),
+                        Available = true
+                    };
                 }
+
 
                 return new ChatSessionResponse
                 {
@@ -81,57 +102,53 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                 };
             }
 
+            private async Task PublishNewSessionCreatedEvent(ChatSession session)
+            {
+                await _publishEndpoint.Publish(new SessionCreatedMessage
+                {
+                    SessionId = session.Id,
+                    ShiftId = session.ShiftId
+                });
+            }
+
             public bool IsOverCapacity(int currentCapacity, int maxCapacity)
             {
                 return currentCapacity >= maxCapacity;
             }
 
-
-            public async Task<ShiftCapacityCacheModel> GetCurrentCapacity(Guid shiftId)
+            public async Task<ShiftCapacityCacheModel> GetShiftRealTimeInformation(Guid shiftId)
             {
                 var shiftCapacityKey = ShiftCachingKeys.CapacityByShift(shiftId);
-                var shiftCapacity = await _cachingService.GetAsync<ShiftCapacityCacheModel?>(shiftCapacityKey);
+                var cacheModel = await _cachingService.GetAsync<ShiftCapacityCacheModel?>(shiftCapacityKey);
 
                 // Means no capacity has been calculated yet.
                 // So we need to calculate the value. Then this value will be kept updated by the consumer
-                if (shiftCapacity == null)
+                if (cacheModel == null)
                 {
-                    var currentTime = TimeOnly.FromDateTime(DateTime.Now);
-                    var shift = await GetShiftByCurrentTime();
-                    var team = await _chatDbContext.Teams.Where(x => x.ShiftId == shift.Id && x.IsMainTeam).FirstAsync();
-
-                    var agentsInShift = await _chatDbContext.Agents.Where(x => x.TeamId == team.Id).ToListAsync();
-                    var seniorityLevels = await _chatDbContext.Seniorities.ToListAsync();
-
-                    var maximumConcurrencyNumber = 10;
-                    var teamLeadSeniority = seniorityLevels.Single(x => x.Name == "TEAM_LEAD");
-                    var seniorSeniority = seniorityLevels.Single(x => x.Name == "SENIOR");
-                    var midLevelSeniority = seniorityLevels.Single(x => x.Name == "MID_LEVEL");
-                    var juniorSeniority = seniorityLevels.Single(x => x.Name == "JUNIOR");
-
-                    var teamLeadsCount = agentsInShift.Count(x => x.SeniorityId == teamLeadSeniority.Id);
-                    var seniorsCount = agentsInShift.Count(x => x.SeniorityId == seniorSeniority.Id);
-                    var midLevelsCount = agentsInShift.Count(x => x.SeniorityId == midLevelSeniority.Id);
-                    var juniorsCount = agentsInShift.Count(x => x.SeniorityId == juniorSeniority.Id);
-
-                    var maxCapacity = (int)(
-                        (teamLeadsCount * maximumConcurrencyNumber * teamLeadSeniority.Factor) +
-                        (seniorsCount * maximumConcurrencyNumber * seniorSeniority.Factor) +
-                        (midLevelsCount * maximumConcurrencyNumber * midLevelSeniority.Factor) +
-                        (juniorsCount * maximumConcurrencyNumber * juniorSeniority.Factor));
-
-
-                    ShiftCapacityCacheModel shiftCapacityCacheModel = new ShiftCapacityCacheModel();
-                    shiftCapacityCacheModel.MaxCapacity = maxCapacity;
-                    shiftCapacityCacheModel.CurrentCapacity = 0;
-
-                    await _cachingService.SetAsync(shiftCapacityKey, shiftCapacityCacheModel, 43200);
-
-                    return shiftCapacityCacheModel;
+                    cacheModel = new ShiftCapacityCacheModel
+                    {
+                        CurrentActiveSessions = 0,
+                        OverflowAgentsRequested = false
+                    };
+                    await _cachingService.SetAsync(shiftCapacityKey, cacheModel);
+                    return cacheModel;
                 }
 
+                return cacheModel;
+            }
 
-                return shiftCapacity;
+            public async Task RequestOverflowAgents(Guid shiftId)
+            {
+                var shiftCapacityKey = ShiftCachingKeys.CapacityByShift(shiftId);
+                var cacheModel = await _cachingService.GetAsync<ShiftCapacityCacheModel?>(shiftCapacityKey);
+                cacheModel!.OverflowAgentsRequested = true;
+                await _cachingService.SetAsync(shiftCapacityKey, cacheModel);
+
+                await _publishEndpoint.Publish(new OverflowAgentsRequestMessage
+                {
+                    ShiftId = shiftId,
+                    Message = "This is an automated request for overflow agents, due to a high-traffic situation in shift."
+                });
             }
 
             public async Task<Shift> GetShiftByCurrentTime()
@@ -139,17 +156,11 @@ namespace ChatSystem.Chat.API.Layers.Application.Sessions.Commands
                 TimeOnly currentTime = TimeOnly.FromDateTime(DateTime.Now);
 
                 return await _chatDbContext.Shifts
-                .Where(x => (x.StartHour < x.EndHour &&
-                            (x.StartHour < currentTime.Hour ||
-                            (x.StartHour == currentTime.Hour && x.StartMinute <= currentTime.Minute)) &&
-                            (x.EndHour > currentTime.Hour ||
-                            (x.EndHour == currentTime.Hour && x.EndMinute >= currentTime.Minute))) ||
-                           (x.StartHour > x.EndHour &&
-                            ((x.StartHour < currentTime.Hour ||
-                            (x.StartHour == currentTime.Hour && x.StartMinute <= currentTime.Minute)) ||
-                            (x.EndHour > currentTime.Hour ||
-                            (x.EndHour == currentTime.Hour && x.EndMinute >= currentTime.Minute)))))
-                .SingleOrDefaultAsync() ?? throw new AppException(new Utils.Errors.CustomError(System.Net.HttpStatusCode.NotFound, "shift_not_found", "Shift not found"));
+                    .Where(x => x.StartHour >= currentTime.Hour && x.StartMinute >= currentTime.Minute && x.EndHour <= currentTime.Hour && x.EndMinute < currentTime.Minute)
+                    .Include(x => x.Teams)
+                    .ThenInclude(x => x.Agents)
+                    .ThenInclude(x => x.Seniority)
+                    .SingleOrDefaultAsync() ?? throw new AppException(new Utils.Errors.CustomError(System.Net.HttpStatusCode.NotFound, "shift_not_found", "Shift not found"));
             }
 
         }

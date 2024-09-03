@@ -6,8 +6,7 @@ namespace ChatSystem.Caching.Models
 {
     public class ShiftCapacityCacheModel
     {
-        public int CurrentCapacity { get; set; }
-        public int MaxCapacity { get; set; }
+        public int CurrentActiveSessions { get; set; }
         public bool OverflowAgentsRequested { get; set; }
     }
 }

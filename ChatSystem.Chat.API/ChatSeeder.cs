@@ -3,6 +3,9 @@ using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Infrastructur
 using ChatSystem.Chat.API.Layers.Infrastructure.Data.Interceptors;
 using ChatSystem.Chat.API.Layers.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Application.Services;
+using ChatSystem.Caching.CachingKeys;
+using ChatSystem.Caching.Models;
 
 namespace ChatSystem.Chat.API
 {
@@ -10,11 +13,13 @@ namespace ChatSystem.Chat.API
     {
         private readonly string _connectionString;
         private readonly ICurrentUserService _currentUserService;
+        private readonly ICachingService _cachingService;
 
-        public ChatSeeder(string connectionString, ICurrentUserService currentUserService)
+        public ChatSeeder(string connectionString, ICurrentUserService currentUserService, ICachingService cachingService)
         {
             _connectionString = connectionString;
             _currentUserService = currentUserService;
+            _cachingService = cachingService;
         }
 
         public ChatDbContext CreateContext()
@@ -32,9 +37,47 @@ namespace ChatSystem.Chat.API
             return new ChatDbContext(optionsBuilder.Options);
         }
 
+        public async Task SeedDefaultCache()
+        {
+            // This should happen when the shift changes, and when the other shift employees clock in.
+            // We will just abstract this logic here for our purposes.
+            var _context = CreateContext();
+            TimeOnly currentTime = TimeOnly.FromDateTime(DateTime.Now);
+            var shift = await _context.Shifts
+            .Where(x =>
+                (x.StartHour < x.EndHour && currentTime.Hour >= x.StartHour && currentTime.Hour <= x.EndHour) ||
+                (x.StartHour > x.EndHour &&
+                    (currentTime.Hour >= x.StartHour || currentTime.Hour <= x.EndHour))
+            )
+            .Include(x => x.Teams)
+            .ThenInclude(x => x.Agents)
+            .ThenInclude(x => x.Seniority)
+            .SingleOrDefaultAsync();
+
+            // Shift Capacity
+            var cacheKey = ShiftCachingKeys.CapacityByShift(shift.Id);
+            await _cachingService.SetAsync(cacheKey, new ShiftCapacityCacheModel
+            {
+                CurrentActiveSessions = 0,
+                OverflowAgentsRequested = false,
+            });
+
+            // Agents in Shift
+            List<AgentsInShiftCacheModel> agentsInShift = shift!.Teams.Where(x => x.IsMainTeam).FirstOrDefault()!.Agents.Select(x => new AgentsInShiftCacheModel
+            {
+                Username = x.Username,
+                Seniority = x.Seniority.Name,
+                Factor = x.Seniority.Factor
+            }).ToList();
+            cacheKey = ShiftCachingKeys.AgentsInShift(shift.Id);
+            await _cachingService.SetAsync(cacheKey, agentsInShift);
+
+        }
+
         public async Task SeedDefaultData()
         {
             var _context = CreateContext();
+            await _context.Database.EnsureCreatedAsync();
 
             await _context.Agents.ExecuteDeleteAsync();
             await _context.Teams.ExecuteDeleteAsync();
@@ -48,7 +91,7 @@ namespace ChatSystem.Chat.API
                 Name = "Office Hours Shift",
                 StartHour = 9,
                 StartMinute = 0,
-                EndHour = 14,
+                EndHour = 16,
                 EndMinute = 59,
                 TimezoneId = timeZoneInfo.Id
             })).Entity;
@@ -56,7 +99,7 @@ namespace ChatSystem.Chat.API
             {
                 Id = Guid.NewGuid(),
                 Name = "Evening Shift",
-                StartHour = 15,
+                StartHour = 17,
                 StartMinute = 0,
                 EndHour = 0,
                 EndMinute = 59,

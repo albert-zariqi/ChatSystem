@@ -82,6 +82,10 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.Property<Guid?>("AgentId")
                     .HasColumnType("uniqueidentifier");
 
+                b.Property<string>("AgentUsername")
+                    .HasMaxLength(100)
+                    .HasColumnType("nvarchar(100)");
+
                 b.Property<string>("CreatedBy")
                     .HasMaxLength(50)
                     .HasColumnType("nvarchar(50)");
@@ -96,7 +100,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                 b.Property<DateTimeOffset?>("LastModifiedOn")
                     .HasColumnType("datetimeoffset");
 
-                b.Property<Guid>("SessionId")
+                b.Property<Guid>("ShiftId")
                     .HasColumnType("uniqueidentifier");
 
                 b.Property<int>("Status")
@@ -235,7 +239,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
                     .IsRequired();
 
                 b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", "Team")
-                    .WithMany()
+                    .WithMany("Agents")
                     .HasForeignKey("TeamId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
@@ -247,17 +251,15 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.ChatSession", b =>
             {
-                b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", "Agent")
+                b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", null)
                     .WithMany("ChatSessions")
                     .HasForeignKey("AgentId");
-
-                b.Navigation("Agent");
             });
 
             modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", b =>
             {
                 b.HasOne("CustomerSupport.Chat.API.Layers.Domain.Entities.Shift", "Shift")
-                    .WithMany()
+                    .WithMany("Teams")
                     .HasForeignKey("ShiftId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
@@ -268,6 +270,16 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Migrations
             modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Agent", b =>
             {
                 b.Navigation("ChatSessions");
+            });
+
+            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Shift", b =>
+            {
+                b.Navigation("Teams");
+            });
+
+            modelBuilder.Entity("CustomerSupport.Chat.API.Layers.Domain.Entities.Team", b =>
+            {
+                b.Navigation("Agents");
             });
 #pragma warning restore 612, 618
         }

@@ -12,7 +12,7 @@ using ChatSystem.Chat.Client.Abstractions.Requests;
 using ChatSystem.Chat.Common.Requests;
 using ChatSystem.Chat.Common.Response;
 
-namespace ChatSystem.Coordinator.ApiClient.Clients.Requests
+namespace ChatSystem.Chat.Client.Clients.Requests
 {
     public class ChatSession : IChatSession
     {
@@ -33,9 +33,33 @@ namespace ChatSystem.Coordinator.ApiClient.Clients.Requests
             var responseResult = new ResponseResult<ChatSessionResponse>(response.IsSuccessStatusCode, response.StatusCode, content);
             if (!responseResult.IsSuccessStatusCode)
             {
-                if (responseResult.ErrorDetails != null && throwOnException)
+                if (responseResult.ProblemDetails != null && throwOnException)
                 {
-                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ErrorDetails.ErrorMessage, responseResult.ErrorDetails.ErrorExceptionMessage));
+                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ProblemDetails.Title, responseResult.ProblemDetails.Detail));
+                }
+
+                if (throwOnException)
+                {
+                    throw new AppException(GenericErrors.ThirdPartyFailure);
+                }
+            }
+            return responseResult;
+        }
+
+        public async Task<ResponseResult> AssignAgent(Guid sessionId, string username, bool throwOnException = true)
+        {
+            var client = _httpClientFactory.CreateClient("ChatClient");
+
+            var response = await client.PostAsync($"api/v1/ChatSession/{sessionId}/assign/{username}", null);
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            var responseResult = new ResponseResult(response.IsSuccessStatusCode, response.StatusCode, content);
+            if (!responseResult.IsSuccessStatusCode)
+            {
+                if (responseResult.ProblemDetails != null && throwOnException)
+                {
+                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ProblemDetails.Title, responseResult.ProblemDetails.Detail));
                 }
 
                 if (throwOnException)
@@ -57,9 +81,9 @@ namespace ChatSystem.Coordinator.ApiClient.Clients.Requests
             var responseResult = new ResponseResult<ChatPollResponse>(response.IsSuccessStatusCode, response.StatusCode, content);
             if (!responseResult.IsSuccessStatusCode)
             {
-                if (responseResult.ErrorDetails != null && throwOnException)
+                if (responseResult.ProblemDetails != null && throwOnException)
                 {
-                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ErrorDetails.ErrorMessage, responseResult.ErrorDetails.ErrorExceptionMessage));
+                    throw new AppException(new CustomError(responseResult.StatusCode, responseResult.ProblemDetails.Title, responseResult.ProblemDetails.Detail));
                 }
 
                 if (throwOnException)

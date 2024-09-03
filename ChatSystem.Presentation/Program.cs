@@ -1,9 +1,11 @@
-using ChatSystem.Coordinator.ApiClient.Configurations;
+using ChatSystem.Chat.Client.Configurations;
 using ChatSystem.Presentation.Hubs;
 using ChatSystem.Presentation;
-using ChatSystem.Coordinator.ApiClient.Extensions;
+using ChatSystem.Chat.Client.Extensions;
 using Quartz;
 using ChatSystem.Presentation.BackgroundServices;
+using ChatSystem.Presentation.Services;
+using ChatSystem.Presentation.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,9 @@ var chatApiClientConfiguration = new ChatApiClientConfiguration();
 builder.Configuration.Bind("ChatApiClientConfiguration", chatApiClientConfiguration);
 builder.Services.AddChatApiClient(chatApiClientConfiguration);
 builder.Services.AddSingleton<ChatSessionManager>();
+builder.Services.AddScoped<IRedisQueue, RedisQueue>();
+
+builder.Services.Configure<ConnectionStrings>(builder.Configuration.GetSection(nameof(ConnectionStrings)));
 
 builder.Services.AddQuartz(q =>
 {

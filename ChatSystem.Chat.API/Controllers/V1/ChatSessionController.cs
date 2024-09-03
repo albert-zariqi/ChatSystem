@@ -35,6 +35,18 @@ namespace ChatSystem.Chat.API.Controllers.V1
             return Ok(result);
         }
 
+        [HttpPost("end/{sessionId}")]
+        [ProducesResponseType(202)]
+        [ProducesResponseType(400, Type = typeof(ProblemDetails))]
+        public async Task<IActionResult> EndSession(Guid sessionId)
+        {
+            _logger.LogInformation("Entering method {method}", nameof(EndSession));
 
+            await _mediator.Send(new EndSessionCommand(sessionId));
+
+            _logger.LogInformation("leaving method {method}", nameof(EndSession));
+
+            return Ok();
+        }
     }
 }

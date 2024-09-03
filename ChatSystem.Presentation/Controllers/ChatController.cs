@@ -38,7 +38,7 @@ namespace ChatSystem.Presentation.Controllers
             {
                 await scheduler.DeleteJob(jobKey);
             }
-            // Return a response, e.g., JSON or redirect
+
             return Ok(new { message = "Chat session ended successfully." });
         }
     }

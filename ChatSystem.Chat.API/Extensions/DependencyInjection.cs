@@ -19,6 +19,7 @@ namespace ChatSystem.Chat.API.Extensions
         public static IServiceCollection RegisterApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<ICachingService, CachingService>();
+            services.AddScoped<IRedisQueue, RedisQueue>();
             return services;
         }
 

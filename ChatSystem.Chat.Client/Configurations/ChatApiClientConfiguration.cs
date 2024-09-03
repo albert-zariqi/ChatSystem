@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChatSystem.Coordinator.ApiClient.Configurations
+namespace ChatSystem.Chat.Client.Configurations
 {
     public class ChatApiClientConfiguration
     {

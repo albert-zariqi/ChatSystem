@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
     <PackageReference Include="Bogus" Version="35.6.0" />
+    <PackageReference Include="MassTransit" Version="8.2.5" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
     <PackageReference Include="MediatR" Version="12.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
@@ -21,6 +23,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Quartz" Version="3.13.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
@@ -32,7 +35,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChatSystem.Caching\ChatSystem.Caching.csproj" />
+    <ProjectReference Include="..\ChatSystem.Chat.Client\ChatSystem.Chat.Client.csproj" />
     <ProjectReference Include="..\ChatSystem.Chat.Common\ChatSystem.Chat.Common.csproj" />
+    <ProjectReference Include="..\ChatSystem.Messaging\ChatSystem.Messaging.csproj" />
     <ProjectReference Include="..\ChatSystem.Utils\ChatSystem.Utils.csproj" />
   </ItemGroup>
 

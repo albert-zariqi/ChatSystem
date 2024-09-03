@@ -7,11 +7,11 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data
 {
     public class ChatDbContext(DbContextOptions<ChatDbContext> options) : DbContext(options), IChatDbContext
     {
-        public DbSet<ChatSession> ChatSessions { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Seniority> Seniorities { get; set; }
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<Agent> Agents { get; set; }
+        public DbSet<ChatSession> ChatSessions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

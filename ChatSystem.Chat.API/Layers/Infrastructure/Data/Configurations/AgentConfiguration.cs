@@ -23,7 +23,7 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Configurations
                 .HasForeignKey(x => x.SeniorityId);
 
             builder.HasOne(x => x.Team)
-                .WithMany()
+                .WithMany(x => x.Agents)
                 .HasForeignKey(x => x.TeamId);
         }
     }

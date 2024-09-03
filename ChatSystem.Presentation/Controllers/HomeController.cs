@@ -1,4 +1,4 @@
-﻿using ChatSystem.Coordinator.ApiClient.Abstractions;
+﻿using ChatSystem.Chat.Client.Abstractions;
 using ChatSystem.Presentation.BackgroundServices;
 using ChatSystem.Presentation.Models;
 using Microsoft.AspNetCore.Mvc;

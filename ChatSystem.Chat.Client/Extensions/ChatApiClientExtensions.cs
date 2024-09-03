@@ -1,14 +1,14 @@
-﻿using ChatSystem.Chat.Client.Abstractions.Requests;
-using ChatSystem.Coordinator.ApiClient.Abstractions;
-using ChatSystem.Coordinator.ApiClient.Clients;
-using ChatSystem.Coordinator.ApiClient.Clients.Requests;
-using ChatSystem.Coordinator.ApiClient.Configurations;
+﻿using ChatSystem.Chat.Client.Abstractions;
+using ChatSystem.Chat.Client.Abstractions.Requests;
+using ChatSystem.Chat.Client.Clients;
+using ChatSystem.Chat.Client.Clients.Requests;
+using ChatSystem.Chat.Client.Configurations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http.Headers;
 
-namespace ChatSystem.Coordinator.ApiClient.Extensions
+namespace ChatSystem.Chat.Client.Extensions
 {
     public static class ChatApiClientExtensions
     {
@@ -27,8 +27,7 @@ namespace ChatSystem.Coordinator.ApiClient.Extensions
 
             services.AddScoped<IChatClient, ChatClient>();
             services.AddScoped<IChatSession, ChatSession>();
-
-            
+            services.AddScoped<IShift, Shift>();
         }
     }
 }

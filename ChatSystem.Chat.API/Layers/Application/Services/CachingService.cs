@@ -1,9 +1,37 @@
-﻿using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Application.Services;
+﻿using ChatSystem.Chat.API.Layers.Application.Configurations;
+using ChatSystem.Chat.API.Layers.Application.Infrastructure.Common.Application.Services;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using StackExchange.Redis;
 
 namespace ChatSystem.Chat.API.Layers.Application.Services
 {
+    public class RedisQueue : IRedisQueue
+    {
+        private readonly IDatabase _db;
+        public RedisQueue(
+            IOptions<ConnectionStrings> connectionStrings
+            )
+        {
+            ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(connectionStrings.Value.RedisConnection);
+            _db = redis.GetDatabase();
+        }
+
+        public async Task<RedisValue> Pop(RedisKey queueName)
+        {
+            return await _db.ListRightPopAsync(queueName);
+        }
+
+        public async Task Push(RedisKey queueName, RedisValue value)
+        {
+            await _db.ListRightPushAsync(queueName, value);
+        }
+        public async Task RemoveAsync(RedisKey queueName)
+        {
+            await _db.KeyDeleteAsync(queueName);
+        }
+    }
     public class CachingService : ICachingService
     {
         private readonly IDistributedCache _distributedCache;

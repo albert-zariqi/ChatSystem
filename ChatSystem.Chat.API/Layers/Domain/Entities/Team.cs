@@ -10,6 +10,7 @@
         #region Navigations
 
         public Shift Shift { get; set; }
+        public List<Agent> Agents { get; set; }
 
         #endregion
     }

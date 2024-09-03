@@ -21,5 +21,6 @@ namespace ChatSystem.Presentation.Hubs
     public class ChatResponse
     {
         public string AgentName { get; set; }
+        public string Message { get; set; }
     }
 }

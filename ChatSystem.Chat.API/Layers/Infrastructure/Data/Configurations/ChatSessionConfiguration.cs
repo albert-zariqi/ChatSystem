@@ -12,10 +12,8 @@ namespace ChatSystem.Chat.API.Layers.Infrastructure.Data.Configurations
 
             builder.Property(x => x.Id).ValueGeneratedNever();
             builder.Property(x => x.Status).IsRequired();
-
-            builder.HasOne(x => x.Agent)
-                .WithMany(x => x.ChatSessions)
-                .HasForeignKey(x => x.AgentId);
+            builder.Property(x => x.AgentUsername).HasMaxLength(100);
+            builder.Property(x => x.ShiftId);
         }
     }
 }
