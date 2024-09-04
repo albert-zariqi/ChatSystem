@@ -119,3 +119,8 @@ finally
     Log.Information("Shutting down...");
     Log.CloseAndFlush();
 }
+
+public partial class Program
+{
+
+}
