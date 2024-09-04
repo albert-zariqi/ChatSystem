@@ -39,21 +39,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B1E02918-D82
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80BE5CE4-0EC0-40CA-9FE3-43CF9721E665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.Presentation", "ChatSystem.Presentation\ChatSystem.Presentation.csproj", "{A643ADCF-514D-495A-80FC-FB26BD7EAC99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatSystem.Presentation", "ChatSystem.Presentation\ChatSystem.Presentation.csproj", "{A643ADCF-514D-495A-80FC-FB26BD7EAC99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.Messaging", "ChatSystem.Messaging\ChatSystem.Messaging.csproj", "{849710C0-1582-4565-9CA3-D04543DECFD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatSystem.Messaging", "ChatSystem.Messaging\ChatSystem.Messaging.csproj", "{849710C0-1582-4565-9CA3-D04543DECFD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.Coordinator.App", "ChatSystem.Coordinator.App\ChatSystem.Coordinator.App.csproj", "{0D0442FB-73C0-46F6-A2B5-3CFEDB3A0E2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatSystem.Coordinator.App", "ChatSystem.Coordinator.App\ChatSystem.Coordinator.App.csproj", "{0D0442FB-73C0-46F6-A2B5-3CFEDB3A0E2D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{E2CCB72E-5337-4952-BBAA-8B08627EB8EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.ApiGateway", "ChatSystem.ApiGateway\ChatSystem.ApiGateway.csproj", "{B716CEEE-985E-4A64-BE92-7C92E4DA85D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatSystem.ApiGateway", "ChatSystem.ApiGateway\ChatSystem.ApiGateway.csproj", "{B716CEEE-985E-4A64-BE92-7C92E4DA85D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{46E7F4D2-5F49-4EDC-A150-773161327512}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{034737AF-FB6D-42E6-B5F5-A1CE5208BC2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.API.UnitTests", "Chat.API.UnitTests\Chat.API.UnitTests.csproj", "{C9C650A2-A60C-4D91-9C8A-3702B8852773}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +101,10 @@ Global
 		{B716CEEE-985E-4A64-BE92-7C92E4DA85D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B716CEEE-985E-4A64-BE92-7C92E4DA85D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B716CEEE-985E-4A64-BE92-7C92E4DA85D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C650A2-A60C-4D91-9C8A-3702B8852773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C650A2-A60C-4D91-9C8A-3702B8852773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C650A2-A60C-4D91-9C8A-3702B8852773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C650A2-A60C-4D91-9C8A-3702B8852773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +129,8 @@ Global
 		{849710C0-1582-4565-9CA3-D04543DECFD4} = {3FF421ED-A8E5-44A6-B088-D34785020B3C}
 		{0D0442FB-73C0-46F6-A2B5-3CFEDB3A0E2D} = {EE39205D-2114-46FE-94EF-B470BD5AFB4C}
 		{B716CEEE-985E-4A64-BE92-7C92E4DA85D5} = {E2CCB72E-5337-4952-BBAA-8B08627EB8EA}
+		{034737AF-FB6D-42E6-B5F5-A1CE5208BC2A} = {B8FA96EB-E1B8-4181-9DB5-D7362DAF7E48}
+		{C9C650A2-A60C-4D91-9C8A-3702B8852773} = {034737AF-FB6D-42E6-B5F5-A1CE5208BC2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AAEED9E-A3B2-4563-BCC4-098AD7E2B294}

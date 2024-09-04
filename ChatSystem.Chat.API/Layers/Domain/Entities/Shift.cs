@@ -11,7 +11,13 @@
 
         public bool IsDuringOfficeHours()
         {
-            if (StartHour >= 9 && StartMinute >= 0 && EndHour >= 14 && EndMinute < 0)
+            TimeOnly officeStart = new TimeOnly(9, 0);  // 9:00 AM
+            TimeOnly officeEnd = new TimeOnly(16, 59);  // 4:59 PM
+
+            TimeOnly shiftStart = new TimeOnly(StartHour, StartMinute);
+            TimeOnly shiftEnd = new TimeOnly(EndHour, EndMinute);
+
+            if (shiftStart >= officeStart && shiftEnd <= officeEnd && shiftEnd > shiftStart)
                 return true;
 
             return false;
